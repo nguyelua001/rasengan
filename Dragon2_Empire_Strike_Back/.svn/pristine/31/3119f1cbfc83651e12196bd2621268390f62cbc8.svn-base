@@ -1,0 +1,341 @@
+package controller;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+
+import model.Item;
+import model.Room;
+
+public class RoomController extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1422343244321042534L;
+
+	/**
+	 * Address of logo
+	 */
+	private static String logoAddress = "/image/dragon.jpg";
+
+	/**
+	 * Address of back ground
+	 */
+	private static String konohaAddress = "/image/konoha.png";
+
+	/**
+	 * Address of room page background
+	 */
+	private static String backAddress = "/image/room.png";
+
+	/**
+	 * Main frame for room page
+	 */
+	private static JFrame myMainFrame;
+
+	/**
+	 * Panel to display background picture
+	 */
+	private static JLabel myBackLabel = new JLabel();
+
+	/**
+	 * Back to log in button
+	 */
+	private static JButton myBackButt;
+
+	/**
+	 * About us button
+	 */
+	private static JButton myAboutButt;
+
+	/**
+	 * Textfield where user can put in Room name
+	 */
+	private static JTextField myTextField;
+
+	/**
+	 * A button that allow customer to add string
+	 */
+	private static JButton myAddText;
+
+	/**
+	 * Remove input button
+	 */
+	private static JButton myRemoveText;
+
+	/**
+	 * Drop box that display the rooms we have
+	 * 
+	 */
+	private static JComboBox<String> myComboBox;
+
+	/**
+	 * Control the amount of room drop from the Combo box First room start from 1.
+	 */
+	private static int myComboCount = 1;
+
+	public RoomController() {
+		createAndShowGUI();
+	}
+
+	/**
+	 * Create and show all the GUI components in this controller.
+	 */
+	public static void createAndShowGUI() {
+
+		myMainFrame = new JFrame("Room Page");
+		myMainFrame.setBounds(100, 100, 1295, 740);
+		myMainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myMainFrame.getContentPane().setLayout(null);
+		myMainFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(RoomController.class.getResource(logoAddress)));
+
+		// Create a JLabel and put a picture on top of that label to creat welcome
+		// picture
+		myBackLabel.setIcon(new ImageIcon(RoomController.class.getResource(backAddress)));
+		myBackLabel.setBounds(0, 0, 1295, 720);
+		/**
+		 * BUTTON AREA
+		 */
+		// Create a back button to the Home page
+		myBackButt = new JButton();
+		myBackButt.setBounds(20, 20, 40, 40);
+		myBackButt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+
+		// Create about us button
+		myAboutButt = new JButton();
+		myAboutButt.setBackground(Color.RED);
+		myAboutButt.setOpaque(true);
+		myAboutButt.setBounds(20, 70, 40, 40);
+		myAboutButt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+
+		// Create add Text button
+		myAddText = new JButton();
+		myAddText.setBackground(Color.BLACK);
+		myAddText.setOpaque(true);
+		myAddText.setBounds(700, 150, 100, 40);
+		myAddText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+
+		// Create add Text button
+		myRemoveText = new JButton();
+		myRemoveText.setBackground(Color.GRAY);
+		myRemoveText.setOpaque(true);
+		myRemoveText.setBounds(1003, 150, 100, 40);
+		myRemoveText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+
+		/**
+		 * TEXT FIELD AREA
+		 */
+		// Create a text field
+		myTextField = new JTextField();
+		myTextField.setBounds(600, 80, 600, 40);
+		myTextField.setHorizontalAlignment(JTextField.CENTER);
+
+		/**
+		 * COMBO BOX AREA
+		 */
+		// Create a drop box
+
+		/**
+		 * 
+		 * 
+		 * Control the amount of new room with a static int. This int can be taken as an
+		 * input by the customer from the Jtextfield
+		 */
+
+		myComboBox = new JComboBox<>(new String[myComboCount]);
+		myComboBox.setBounds(600, 240, 600, 60);
+		// myComboBox.showPopup();
+		myComboBox.setEditable(true);
+
+		/**
+		 * THIS PLACE FOR COMBO COMPONENTS ONLY
+		 */
+
+		/**
+		 * PLACE FOR FRAME. ADD CONTENT PANE
+		 */
+		// Add back button
+		myMainFrame.getContentPane().add(myBackButt);
+
+		// Add about us button
+		myMainFrame.getContentPane().add(myAboutButt);
+
+		// Add text button
+		myMainFrame.getContentPane().add(myAddText);
+
+		// Remove text button
+		myMainFrame.getContentPane().add(myRemoveText);
+
+		// Add text field
+		myMainFrame.getContentPane().add(myTextField);
+
+		// Add Drop box
+		myMainFrame.getContentPane().add(myComboBox);
+
+		/**
+		 * WARNING: IMPLEMENTS JCOMPONETS ABOVE THESE LINES
+		 */
+		// Background pixel size 1276x731
+
+		// Add elements to the main frame. Add ITACHI PICTURE
+		myMainFrame.getContentPane().add(myBackLabel);
+
+		// VISIBILITY
+		myMainFrame.setVisible(true);
+
+		addListener();
+	}
+
+	/**
+	 * Helper class to control items in the dropbox list
+	 */
+	public static void dropBoxList() {
+
+	}
+
+	/**
+	 * Add listener to our GUI components
+	 */
+	public static void addListener() {
+
+		// BACK BUTTON
+		myBackButt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				new HomeController();
+				// Close the window
+				myMainFrame.dispose();
+			}
+		});
+
+		// ABOUT BUTTON
+		myAboutButt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				UIManager.put("OptionPane.background", Color.BLACK);
+				UIManager.getLookAndFeelDefaults().put("Panel.background", Color.BLACK);
+				JOptionPane.showMessageDialog(null,
+						"Dragon Group About Box\nHome Application Ver " + "\nCopyright @ 2020, UW Tacoma "
+								+ "\nHung Thai\nNick Feels Great\nVanessa Hung",
+						"About Us", JOptionPane.INFORMATION_MESSAGE);
+
+			}
+		});
+
+		// ADD ROOM button
+
+		myAddText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+
+				// JOptionPane.showMessageDialog(null, myTextField.getText());
+
+				if (myTextField.getText().isEmpty()) {
+					// If its empty do nothing.
+
+				} else {
+					
+				
+					myComboBox.addItem(myTextField.getText());
+					// if someone hit the button. Clear the text field.
+					myTextField.setText("");
+
+					// Show drop down when ever an item is added.
+					myComboBox.showPopup();
+				}
+			}
+		});
+
+		// Remove ROOM button
+		myRemoveText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+
+				// In case if there is no text and array is not empty. Delete the most recent
+				if (myTextField.getText().isEmpty() && myComboBox.getItemCount() > 0) {
+					// Delete the most recent add button
+					myComboBox.removeItemAt(myComboBox.getItemCount() - 1);
+					
+					
+				} else {
+
+					// If customer input something. Remove the string with the same name.
+					myComboBox.removeItem(myTextField.getText());
+					
+					
+				}
+				
+				// Show drop down when ever an item is remove.
+				myComboBox.showPopup();
+			}
+		});
+
+//		myComboBox.addActionListener(new ActionListener() {
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//					
+//	
+//					 
+//					JOptionPane.showMessageDialog(null, e.getSource().toString());
+//					new ItemController("Demo");
+//					
+//				}
+//
+//			
+//		});
+		
+		
+		myComboBox.addItemListener(new ItemListener(){
+            @Override
+            public void itemStateChanged(ItemEvent e){
+               if(e.getStateChange() == ItemEvent.SELECTED){
+               new ItemController("Demo");
+         
+               }  
+            }
+        });
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

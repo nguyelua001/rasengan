@@ -1,0 +1,15 @@
+package controller;
+
+import javax.swing.JPanel;
+
+public class ItemController extends JPanel {
+
+	public ItemController() {
+		showAndCreateGUI();
+
+	}
+
+	public static void showAndCreateGUI() {
+
+	}
+}

@@ -1,0 +1,34 @@
+package test_package;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class HouseTest {
+
+	@Test
+	public void testHouse() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddRoom() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRemoveRoom() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetRoom() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetRoomName() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,149 @@
+package controller;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.File;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+/**
+ * This class is the main controller for our GUI and data structure presenting
+ * the house.
+ * 
+ * @author Nick the Great, Hung Thai, Vanessa Hung
+ * @version 6/1/2020
+ *
+ */
+public class HomeController extends JPanel implements PropertyChangeListener {
+	// Share display elements
+
+	private static String logoAddress = "/image/dragon.jpg";
+
+	private static String konohaAddress = "/image/konoha.png";
+
+	// Log in page display elements
+
+	/**
+	 * Main frame for log in page
+	 */
+	private static JFrame myLoginFrame;
+
+	/**
+	 * Panel to display log in picture.
+	 */
+	private static JLabel myLoginPicture = new JLabel();
+
+	/**
+	 * Label to dipsplay login konha image
+	 */
+	private static JLabel myLoginIcon = new JLabel();
+
+	/**
+	 * TextField for User name
+	 */
+	private static JTextField myUserText;
+
+	/**
+	 * TextField for Password field
+	 */
+	private static JPasswordField myPassText;
+
+	/**
+	 * Log in button
+	 */
+	private static JButton myLoginButton;
+
+	// Welcome page - My house display elements
+
+	// Room page display elements
+
+	// Item page display elements
+
+	public HomeController(final PropertyChangeListener theEvent) {
+
+		layoutComponents();
+	}
+
+	private void layoutComponents() {
+
+	}
+
+	/**
+	 * Create the GUI and show it. For thread safety, this method should be invoked
+	 * from the event-dispatching thread.
+	 * 
+	 * NOTE: This is the place where all of the parts and pieces of this project are
+	 * in the same place. This is where we should instantiate our MOdel and add it
+	 * to the controller and view.
+	 */
+	public static void createAndShowGUI() {
+		// Login page stuffs
+		myLoginFrame = new JFrame("Login Page");
+		myLoginFrame.setBounds(100, 100, 1295, 740);
+		myLoginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myLoginFrame.getContentPane().setLayout(null);
+		myLoginFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(HomeController.class.getResource(logoAddress)));
+
+		// Create a JLabel and put a picture on top of that label to creat welcome
+		// picture
+		myLoginPicture.setIcon(new ImageIcon(HomeController.class.getResource("/image/nar2.jpg")));
+		myLoginPicture.setBounds(400, 0, 1295, 720);
+
+		// Create JLabel for Konoha logo
+		myLoginIcon.setIcon(new ImageIcon(HomeController.class.getResource(konohaAddress)));
+		myLoginIcon.setBounds(145,90,135,135);
+		
+		
+		// Creat Textfield for Username
+		myUserText = new JTextField("USERNAME");
+		myUserText.setBounds(75, 220, 250, 50);
+
+		// Create text field for password
+		myPassText = new JPasswordField();
+		myPassText.setBounds(75, 300, 250, 50);
+
+		// Create a log in button
+		myLoginButton = new JButton("Log in");
+		myLoginButton.setBounds(110, 380, 175, 30);
+
+		// Put these two Jtext field on the panel
+		
+		myLoginFrame.getContentPane().add(myLoginPicture);
+		myLoginFrame.getContentPane().add(myUserText);
+		myLoginFrame.getContentPane().add(myPassText);
+		myLoginFrame.getContentPane().add(myLoginButton);
+		myLoginFrame.getContentPane().add(myLoginIcon);
+
+		// Important. Set the frame to visible
+		myLoginFrame.setVisible(true);
+
+		addListener();
+
+	}
+
+	/**
+	 * Add listener to any GUI components that need it.
+	 */
+	public static void addListener() {
+		myUserText.addActionListener(theEvent -> {
+			
+		});
+
+	}
+
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+
+	}
+
+}

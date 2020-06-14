@@ -1,0 +1,49 @@
+package test_package;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import model.Item;
+
+public class ItemTest {
+
+	@Test
+	public void testItemString() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testItemStringInt() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetName() {
+		Item test = new Item("TV");
+		test.setName("Bicycle");
+		assertEquals(test.getName(),"Bicycle");
+
+	}
+
+	@Test
+	public void testGetName() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSetId() {
+		//Create Item object
+		Item test = new Item("random");
+		//Calling setID from Item clsas to do the change
+		test.setId(5);
+		//Comparing if the ID, 5
+		assertEquals(test.getID(),5);
+	}
+
+	@Test
+	public void testGetID() {
+		fail("Not yet implemented");
+	}
+
+}

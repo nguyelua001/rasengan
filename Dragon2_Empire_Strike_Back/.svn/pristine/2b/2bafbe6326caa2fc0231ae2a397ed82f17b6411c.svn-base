@@ -1,0 +1,213 @@
+package controller;
+
+import java.awt.Color;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class ItemController extends JPanel {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 142453244321042534L;
+
+	/**
+	 * Address of logo
+	 */
+	private static String logoAddress = "/image/dragon.jpg";
+
+	/**
+	 * Address of back ground
+	 */
+	private static String konohaAddress = "/image/konoha.png";
+
+	/**
+	 * Address of room page background
+	 */
+	private static String backAddress = "/image/items.jpg";
+
+	/**
+	 * Main frame for room page
+	 */
+	private static JFrame myMainFrame;
+
+	/**
+	 * Panel to display background picture
+	 */
+	private static JLabel myBackLabel = new JLabel();
+
+	/**
+	 * Back to log in button
+	 */
+	private static JButton myBackButt;
+
+	/**
+	 * Textfield where user can put in Room name
+	 */
+	private static JTextField myTextField;
+
+	/**
+	 * A button that allow customer to add string
+	 */
+	private static JButton myAddText;
+
+	/**
+	 * Remove input button
+	 */
+	private static JButton myRemoveText;
+
+	/**
+	 * Drop box that display the rooms we have
+	 * 
+	 */
+	private static JComboBox<String> myComboBox;
+	
+	
+	
+
+	/**
+	 * Control the amount of room drop from the Combo box First room start from 1.
+	 */
+	private static int myComboCount = 1;
+
+	
+	
+
+	public ItemController(String itemName) {
+		showAndCreateGUI();
+
+	}
+
+	public static void showAndCreateGUI() {
+
+		myMainFrame = new JFrame("Room Page");
+		myMainFrame.setBounds(100, 100, 1295, 740);
+		myMainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myMainFrame.getContentPane().setLayout(null);
+		myMainFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(RoomController.class.getResource(logoAddress)));
+
+		// Create a JLabel and put a picture on top of that label to creat welcome
+		// picture
+		myBackLabel.setIcon(new ImageIcon(ItemController.class.getResource(backAddress)));
+		myBackLabel.setBounds(0, 0, 1295, 720);
+		/**
+		 * BUTTON AREA
+		 */
+		// Create a back button to the Home page
+		myBackButt = new JButton();
+		myBackButt.setBounds(20, 20, 40, 40);
+		myBackButt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+		// Create add Text button
+		myAddText = new JButton();
+		myAddText.setBackground(Color.BLACK);
+		myAddText.setOpaque(true);
+		myAddText.setBounds(700, 150, 100, 40);
+		myAddText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+
+		// Create add Text button
+		myRemoveText = new JButton();
+		myRemoveText.setBackground(Color.GRAY);
+		myRemoveText.setOpaque(true);
+		myRemoveText.setBounds(1003, 150, 100, 40);
+		myRemoveText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e1) {
+				// Overriding method below.
+			}
+		});
+
+		/**
+		 * TEXT FIELD AREA
+		 */
+		// Create a text field
+		myTextField = new JTextField();
+		myTextField.setBounds(600, 80, 600, 40);
+		myTextField.setHorizontalAlignment(JTextField.CENTER);
+
+		/**
+		 * COMBO BOX AREA
+		 */
+		// Create a drop box
+
+		/**
+		 * 
+		 * 
+		 * Control the amount of new room with a static int. This int can be taken as an
+		 * input by the customer from the Jtextfield
+		 */
+
+		myComboBox = new JComboBox<>(new String[myComboCount]);
+		myComboBox.setBounds(600, 240, 600, 60);
+
+		myComboBox.setEditable(true);
+
+		/**
+		 * THIS PLACE FOR COMBO COMPONENTS ONLY
+		 */
+
+		/**
+		 * PLACE FOR FRAME. ADD CONTENT PANE
+		 */
+		// Add back button
+		myMainFrame.getContentPane().add(myBackButt);
+
+
+
+		// Add text button
+		myMainFrame.getContentPane().add(myAddText);
+
+		// Remove text button
+		myMainFrame.getContentPane().add(myRemoveText);
+
+		// Add text field
+		myMainFrame.getContentPane().add(myTextField);
+
+		// Add Drop box
+		myMainFrame.getContentPane().add(myComboBox);
+
+		/**
+		 * WARNING: IMPLEMENTS JCOMPONETS ABOVE THESE LINES
+		 */
+		// Background pixel size 1276x731
+
+		// Add elements to the main frame. Add ITACHI PICTURE
+		myMainFrame.getContentPane().add(myBackLabel);
+
+		// VISIBILITY
+		myMainFrame.setVisible(true);
+
+		addListener();
+
+	}
+
+	private static void addListener() {
+		// TODO Auto-generated method stub
+		
+		// BACK BUTTON
+				myBackButt.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e1) {
+						
+						
+						// Close the window
+						myMainFrame.dispose();
+					}
+				});
+		
+	}
+}
