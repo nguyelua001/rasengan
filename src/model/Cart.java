@@ -17,7 +17,7 @@ import java.util.Objects;
  * This class represent a shopping cart. It can add, remove , toString and
  * calculate the cost of items in the cart.
  * 
- * @author Nick Nguyen
+ * @author Nick Nguyen.
  * @version 11 Oct 2019
  *
  */
