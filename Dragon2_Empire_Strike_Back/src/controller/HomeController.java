@@ -28,7 +28,7 @@ import model.Room;
  * the house.
  * 
  * @author  Hung Thai
- * @version 6/1/2020 .
+ * @version 6/1/2020 ..
  *
  */
 public class HomeController extends JPanel {
