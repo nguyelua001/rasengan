@@ -1,0 +1,120 @@
+src/controller/ControllerPanel.java:2:	ExcessiveImports: A high number of imports can indicate a high degree of coupling within an object.
+src/controller/ControllerPanel.java:2:	ExcessiveImports: A high number of imports can indicate a high degree of coupling within an object.
+src/controller/ControllerPanel.java:70:	SingularField: Perhaps 'myRace' could be replaced by a local variable.
+src/controller/ControllerPanel.java:70:	SingularField: Perhaps 'myRace' could be replaced by a local variable.
+src/controller/ControllerPanel.java:70:	UnusedPrivateField: Avoid unused private fields such as 'myRace'.
+src/controller/ControllerPanel.java:70:	UnusedPrivateField: Avoid unused private fields such as 'myRace'.
+src/controller/ControllerPanel.java:88:	SingularField: Perhaps 'myTimer' could be replaced by a local variable.
+src/controller/ControllerPanel.java:88:	SingularField: Perhaps 'myTimer' could be replaced by a local variable.
+src/controller/ControllerPanel.java:88:	UnusedPrivateField: Avoid unused private fields such as 'myTimer'.
+src/controller/ControllerPanel.java:88:	UnusedPrivateField: Avoid unused private fields such as 'myTimer'.
+src/controller/ControllerPanel.java:101:	FinalFieldCouldBeStatic: This final field could be made static
+src/controller/ControllerPanel.java:101:	FinalFieldCouldBeStatic: This final field could be made static
+src/controller/ControllerPanel.java:101:	UnusedPrivateField: Avoid unused private fields such as 'myLn'.
+src/controller/ControllerPanel.java:101:	UnusedPrivateField: Avoid unused private fields such as 'myLn'.
+src/controller/ControllerPanel.java:112:	ImmutableField: Private field 'LINE_SEPERATOR' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ControllerPanel.java:112:	ImmutableField: Private field 'LINE_SEPERATOR' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ControllerPanel.java:112:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/controller/ControllerPanel.java:112:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/controller/ControllerPanel.java:115:	ImmutableField: Private field 'myInformationItem' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ControllerPanel.java:115:	ImmutableField: Private field 'myInformationItem' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ControllerPanel.java:120:	FinalFieldCouldBeStatic: This final field could be made static
+src/controller/ControllerPanel.java:120:	FinalFieldCouldBeStatic: This final field could be made static
+src/controller/ControllerPanel.java:130:	ImmutableField: Private field 'myTEN' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ControllerPanel.java:130:	ImmutableField: Private field 'myTEN' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ControllerPanel.java:225:	UnusedFormalParameter: Avoid unused method parameters such as 'theEvent'.
+src/controller/ControllerPanel.java:225:	UnusedFormalParameter: Avoid unused method parameters such as 'theEvent'.
+src/controller/ControllerPanel.java:377:	InsufficientStringBufferDeclaration: StringBuffer constructor is initialized with size 16, but has at least 59 characters appended.
+src/controller/ControllerPanel.java:377:	InsufficientStringBufferDeclaration: StringBuffer constructor is initialized with size 16, but has at least 59 characters appended.
+src/controller/ControllerPanel.java:394:	UnusedPrivateMethod: Avoid unused private methods such as 'myRaceInfo()'.
+src/controller/ControllerPanel.java:394:	UnusedPrivateMethod: Avoid unused private methods such as 'myRaceInfo()'.
+src/controller/ControllerPanel.java:417:	UnusedPrivateMethod: Avoid unused private methods such as 'addListeners()'.
+src/controller/ControllerPanel.java:417:	UnusedPrivateMethod: Avoid unused private methods such as 'addListeners()'.
+src/model/AbstractMessage.java:12:	ImmutableField: Private field 'myTimeStamp' could be made final; it is only initialized in the declaration or constructor.
+src/model/AbstractMessage.java:12:	ImmutableField: Private field 'myTimeStamp' could be made final; it is only initialized in the declaration or constructor.
+src/model/AbstractMessage.java:16:	ImmutableField: Private field 'myMessageType' could be made final; it is only initialized in the declaration or constructor.
+src/model/AbstractMessage.java:16:	ImmutableField: Private field 'myMessageType' could be made final; it is only initialized in the declaration or constructor.
+src/model/LeaderboardMessage.java:14:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/LeaderboardMessage.java:14:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/LeaderboardMessage.java:18:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/LeaderboardMessage.java:18:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/LeaderboardMessage.java:22:	ImmutableField: Private field 'myRacerIDList' could be made final; it is only initialized in the declaration or constructor.
+src/model/LeaderboardMessage.java:22:	ImmutableField: Private field 'myRacerIDList' could be made final; it is only initialized in the declaration or constructor.
+src/model/LeaderboardMessage.java:52:	LocalVariableCouldBeFinal: Local variable 'racerID' could be declared final
+src/model/LeaderboardMessage.java:52:	LocalVariableCouldBeFinal: Local variable 'racerID' could be declared final
+src/model/LeaderboardMessage.java:53:	UseStringBufferForStringAppends: Prefer StringBuilder (non-synchronized) or StringBuffer (synchronized) over += for concatenating strings
+src/model/LeaderboardMessage.java:53:	UseStringBufferForStringAppends: Prefer StringBuilder (non-synchronized) or StringBuffer (synchronized) over += for concatenating strings
+src/model/LineCrossingMessage.java:13:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/LineCrossingMessage.java:13:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/LineCrossingMessage.java:17:	ImmutableField: Private field 'myRacerID' could be made final; it is only initialized in the declaration or constructor.
+src/model/LineCrossingMessage.java:17:	ImmutableField: Private field 'myRacerID' could be made final; it is only initialized in the declaration or constructor.
+src/model/LineCrossingMessage.java:21:	ImmutableField: Private field 'myLap' could be made final; it is only initialized in the declaration or constructor.
+src/model/LineCrossingMessage.java:21:	ImmutableField: Private field 'myLap' could be made final; it is only initialized in the declaration or constructor.
+src/model/LineCrossingMessage.java:25:	ImmutableField: Private field 'myIsFinished' could be made final; it is only initialized in the declaration or constructor.
+src/model/LineCrossingMessage.java:25:	ImmutableField: Private field 'myIsFinished' could be made final; it is only initialized in the declaration or constructor.
+src/model/LineCrossingMessage.java:60:	BooleanGetMethodName: A getX() method which returns a boolean should be named isX()
+src/model/LineCrossingMessage.java:60:	BooleanGetMethodName: A getX() method which returns a boolean should be named isX()
+src/model/Participant.java:17:	ImmutableField: Private field 'myRacerID' could be made final; it is only initialized in the declaration or constructor.
+src/model/Participant.java:17:	ImmutableField: Private field 'myRacerID' could be made final; it is only initialized in the declaration or constructor.
+src/model/Participant.java:21:	ImmutableField: Private field 'myRacerName' could be made final; it is only initialized in the declaration or constructor.
+src/model/Participant.java:21:	ImmutableField: Private field 'myRacerName' could be made final; it is only initialized in the declaration or constructor.
+src/model/Participant.java:25:	ImmutableField: Private field 'myRacerDistance' could be made final; it is only initialized in the declaration or constructor.
+src/model/Participant.java:25:	ImmutableField: Private field 'myRacerDistance' could be made final; it is only initialized in the declaration or constructor.
+src/model/Participant.java:47:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 's'
+src/model/Participant.java:47:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 's'
+src/model/ParticipantList.java:16:	ImmutableField: Private field 'myRacerList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:16:	ImmutableField: Private field 'myRacerList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:18:	ImmutableField: Private field 'myNameList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:18:	ImmutableField: Private field 'myNameList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:20:	ImmutableField: Private field 'myRaceIDList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:20:	ImmutableField: Private field 'myRaceIDList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:22:	ImmutableField: Private field 'myDistanceList' could be made final; it is only initialized in the declaration or constructor.
+src/model/ParticipantList.java:22:	ImmutableField: Private field 'myDistanceList' could be made final; it is only initialized in the declaration or constructor.
+src/model/RaceInfo.java:23:	ImmutableField: Private field 'myLn' could be made final; it is only initialized in the declaration or constructor.
+src/model/RaceInfo.java:23:	ImmutableField: Private field 'myLn' could be made final; it is only initialized in the declaration or constructor.
+src/model/RaceInfo.java:23:	UnusedPrivateField: Avoid unused private fields such as 'myLn'.
+src/model/RaceInfo.java:23:	UnusedPrivateField: Avoid unused private fields such as 'myLn'.
+src/model/RaceInfo.java:32:	ImmutableField: Private field 'LINE_SEPERATOR' could be made final; it is only initialized in the declaration or constructor.
+src/model/RaceInfo.java:32:	ImmutableField: Private field 'LINE_SEPERATOR' could be made final; it is only initialized in the declaration or constructor.
+src/model/RaceInfo.java:32:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/RaceInfo.java:32:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/RaceInfo.java:49:	UncommentedEmptyConstructor: Document empty constructor
+src/model/RaceInfo.java:49:	UncommentedEmptyConstructor: Document empty constructor
+src/model/RaceInfo.java:119:	InsufficientStringBufferDeclaration: StringBuffer constructor is initialized with size 16, but has at least 36 characters appended.
+src/model/RaceInfo.java:119:	InsufficientStringBufferDeclaration: StringBuffer constructor is initialized with size 16, but has at least 36 characters appended.
+src/model/RaceInfo.java:122:	InefficientStringBuffering: Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/model/RaceInfo.java:122:	InefficientStringBuffering: Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/model/RaceInfo.java:124:	InefficientStringBuffering: Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/model/RaceInfo.java:124:	InefficientStringBuffering: Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/model/RaceInfo.java:126:	InefficientStringBuffering: Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/model/RaceInfo.java:126:	InefficientStringBuffering: Avoid concatenating nonliterals in a StringBuffer/StringBuilder constructor or append().
+src/model/RaceInfo.java:139:	SimpleDateFormatNeedsLocale: When instantiating a SimpleDateFormat object, specify a Locale
+src/model/RaceInfo.java:139:	SimpleDateFormatNeedsLocale: When instantiating a SimpleDateFormat object, specify a Locale
+src/model/RacingModel.java:32:	ImmutableField: Private field 'Colon' could be made final; it is only initialized in the declaration or constructor.
+src/model/RacingModel.java:32:	ImmutableField: Private field 'Colon' could be made final; it is only initialized in the declaration or constructor.
+src/model/RacingModel.java:46:	SingularField: Perhaps 'myRacer' could be replaced by a local variable.
+src/model/RacingModel.java:46:	SingularField: Perhaps 'myRacer' could be replaced by a local variable.
+src/model/RacingModel.java:55:	SingularField: Perhaps 'width' could be replaced by a local variable.
+src/model/RacingModel.java:55:	SingularField: Perhaps 'width' could be replaced by a local variable.
+src/model/RacingModel.java:55:	UnusedPrivateField: Avoid unused private fields such as 'width'.
+src/model/RacingModel.java:55:	UnusedPrivateField: Avoid unused private fields such as 'width'.
+src/model/RacingModel.java:60:	SingularField: Perhaps 'height' could be replaced by a local variable.
+src/model/RacingModel.java:60:	SingularField: Perhaps 'height' could be replaced by a local variable.
+src/model/RacingModel.java:60:	UnusedPrivateField: Avoid unused private fields such as 'height'.
+src/model/RacingModel.java:60:	UnusedPrivateField: Avoid unused private fields such as 'height'.
+src/model/RacingModel.java:68:	SingularField: Perhaps 'myMessage' could be replaced by a local variable.
+src/model/RacingModel.java:68:	SingularField: Perhaps 'myMessage' could be replaced by a local variable.
+src/model/RacingModel.java:211:	ExcessiveMethodLength: Avoid really long methods.
+src/model/RacingModel.java:211:	ExcessiveMethodLength: Avoid really long methods.
+src/model/RacingModel.java:215:	CloseResource: Ensure that resources like this Scanner object are closed after use
+src/model/RacingModel.java:215:	CloseResource: Ensure that resources like this Scanner object are closed after use
+src/model/RacingModel.java:281:	CloseResource: Ensure that resources like this Scanner object are closed after use
+src/model/RacingModel.java:281:	CloseResource: Ensure that resources like this Scanner object are closed after use
+src/model/TelementryMessage.java:12:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/TelementryMessage.java:12:	SuspiciousConstantFieldName: The field name indicates a constant but its modifiers do not
+src/model/TelementryMessage.java:16:	ImmutableField: Private field 'myRacerID' could be made final; it is only initialized in the declaration or constructor.
+src/model/TelementryMessage.java:16:	ImmutableField: Private field 'myRacerID' could be made final; it is only initialized in the declaration or constructor.
+src/model/TelementryMessage.java:20:	ImmutableField: Private field 'myDistance' could be made final; it is only initialized in the declaration or constructor.
+src/model/TelementryMessage.java:20:	ImmutableField: Private field 'myDistance' could be made final; it is only initialized in the declaration or constructor.
+src/model/TelementryMessage.java:24:	ImmutableField: Private field 'myLap' could be made final; it is only initialized in the declaration or constructor.
+src/model/TelementryMessage.java:24:	ImmutableField: Private field 'myLap' could be made final; it is only initialized in the declaration or constructor.
